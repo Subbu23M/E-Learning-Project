@@ -1,0 +1,28 @@
+1)To work with git,use this commands.
+
+To add commits 
+git add . 
+git commit -m 'message'
+git status 
+git log 
+
+git remote set-url origin 'https:url'
+git remote
+git push origin master 
+
+node module commands 
+
+1)npm install axios
+
+2)npm install node-sass
+
+3)npm install react-router-dom@5.2.0
+
+4)npm install uuid
+    import { v4 as uuidv4 } from 'uuid';
+
+5)npm install redux
+
+6)npm install react-redux
+
+7)npm install redux-thunk
