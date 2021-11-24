@@ -10,6 +10,10 @@ git remote set-url origin 'https:url'
 git remote
 git push origin master 
 
+To clear the screen in Git - clear
+
+Press q to back to git
+
 node module commands 
 
 1)npm install axios
