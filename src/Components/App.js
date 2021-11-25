@@ -1,11 +1,14 @@
 import React from 'react';
 
-import './Main.scss';
+import '../Styling/Main.scss';
+
+import NavBar from './NavBar';
 
 const App = () => {
     return (
         <>
-            
+            {/* Child Component Instance */}
+            <NavBar/>
         </>
     )
 }
