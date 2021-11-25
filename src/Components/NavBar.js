@@ -17,7 +17,23 @@ import Account from './Account';
 const NavBar = () => {
     return (
         <>
-            
+            <ul>
+                <li>
+                    <Link to='/register'>
+                        Register 
+                    </Link>
+                </li>
+            </ul>
+
+            <Switch>
+                <Route
+                    path='/register'
+                    component={Register}
+                    exact
+                >
+
+                </Route>
+            </Switch>
         </>
     )
 }
