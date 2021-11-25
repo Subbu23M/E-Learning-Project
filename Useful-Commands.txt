@@ -30,3 +30,7 @@ node module commands
 6)npm install react-redux
 
 7)npm install redux-thunk
+
+8)npm install formik --save
+
+9)npm install -S yup
