@@ -21,3 +21,19 @@ a{
 input:focus{
     outline: none;
 }
+
+.header-three{
+    margin-top: 6rem;
+}
+
+form{
+    margin-top: 1rem;
+
+    .form-group {
+        margin-left: 36rem;
+    }
+
+    .button-group{
+        margin-left: 1rem;
+    }
+}
