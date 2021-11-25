@@ -4,9 +4,9 @@ import './Main.scss';
 
 const App = () => {
     return (
-        <div>
+        <>
             
-        </div>
+        </>
     )
 }
 
