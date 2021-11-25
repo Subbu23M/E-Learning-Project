@@ -7,7 +7,7 @@ import configureStore from './store/configureStore';
 
 import { Provider } from 'react-redux';
 
-// import App from './Components/App';
+import App from './Components/App';
 
 const store = configureStore();
 // console.log(store.getState());
@@ -29,4 +29,4 @@ const jsx = (
   </Provider>
 )
 
-// ReactDOM.render(jsx,rootElement);
+ReactDOM.render(jsx,rootElement);
