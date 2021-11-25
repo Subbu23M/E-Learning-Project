@@ -14,6 +14,8 @@ import Dashboard from './Dashboard';
 
 import Account from './Account';
 
+import PageError from './PageError';
+
 const NavBar = () => {
     return (
         <>
@@ -23,6 +25,11 @@ const NavBar = () => {
                         Register 
                     </Link>
                 </li>
+                <li>
+                    <Link to='/login'>
+                        Login
+                    </Link>
+                </li>
             </ul>
 
             <Switch>
@@ -30,9 +37,20 @@ const NavBar = () => {
                     path='/register'
                     component={Register}
                     exact
-                >
+                />
 
-                </Route>
+                <Route
+                    path='/login'
+                    component={Login}
+                    exact
+                />
+
+                <Route
+                    path='/*'
+                    component={PageError}
+                    exact
+                />
+
             </Switch>
         </>
     )
