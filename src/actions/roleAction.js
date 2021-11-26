@@ -31,7 +31,7 @@ export const asyncRegisterAdmin = () => {
 }
 
 // creating admin login action
-export const ayncLoginAdmin = () => {
+export const asyncLoginAdmin = () => {
     return ((dispatch) => {
 
         const baseUrl = 'https://dct-e-learning.herokuapp.com/api/admin/login';
@@ -52,10 +52,10 @@ export const ayncLoginAdmin = () => {
                 } else {
                     alert('admin is logged in successfully');
 
-                    // Store JWT(JSON Web Token) in Browser memory
+                    // Create JWT(JSON Web Token) Property in Browser memory
                     localStorage.setItem('JWT_Token', result.token);
 
-                    // Dispatch action to collect user token
+                    // Dispatch action to collect admin token
                     dispatch(getAdminDetails(result.token));
                 }
             })
@@ -85,7 +85,7 @@ export const getAdminDetails = () => {
                 .then((response) => {
                     const result = response.data;
 
-                    // dispatch action to state
+                    // dispatch action to state to store admin details
                     dispatch(setAdminInfo(result));
                     dispatch(stopLoading());
                 })
