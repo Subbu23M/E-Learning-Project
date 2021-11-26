@@ -30,7 +30,7 @@ const validationSchema = yup.object({
 })
 
 // function component
-const Register = () => {
+const Register = (props) => {
     // Invoke dispatch hook
     const dispatch = useDispatch();
 
@@ -63,7 +63,7 @@ const Register = () => {
             <form autoComplete='off'>
 
                 {/* 1 */}
-                <div className="form-group">
+                <div className="form-group mb-2">
 
                     <input 
                         type="text" 

@@ -22,7 +22,7 @@ const validationSchema = yup.object({
 })
 
 // function component
-const Login = () => {
+const Login = (props) => {
 
     // Invoke useDispatch hook
     const dispatch = useDispatch();
