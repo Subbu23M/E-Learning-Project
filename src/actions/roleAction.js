@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 // creating admin registration action
-export const asyncRegisterAdmin = () => {
+export const asyncRegisterAdmin = (values,resetForm,reDirect) => {
     return () => {
         const baseUrl = 'https://dct-e-learning.herokuapp.com/api/admin/register';
 
         // consuming code
         axios
-            .post(baseUrl)
+            .post(baseUrl,values)
 
             // success
             .then((response) => {
@@ -17,10 +17,16 @@ export const asyncRegisterAdmin = () => {
                 // Object.keys(result).includes('errors');
 
                 if (result.hasOwnProperty('errors')) {
-                    alert(error.message);
+                    alert(result.errors);
                 } else {
                     alert('admin is registered successfully');
                 }
+
+                // After successfully registered,we should invoke reset form
+                resetForm();
+
+                // And redirect the admin to login page
+                reDirect();
             })
 
             // failure
@@ -31,14 +37,14 @@ export const asyncRegisterAdmin = () => {
 }
 
 // creating admin login action
-export const asyncLoginAdmin = () => {
+export const asyncLoginAdmin = (values,resetForm,reDirect) => {
     return ((dispatch) => {
 
         const baseUrl = 'https://dct-e-learning.herokuapp.com/api/admin/login';
 
         // consuming code
         axios
-            .post(baseUrl)
+            .post(baseUrl,values)
 
             // success
             .then((response) => {
@@ -48,7 +54,7 @@ export const asyncLoginAdmin = () => {
                 // Object.keys(result).includes('errors');
 
                 if (result.hasOwnProperty('errors')) {
-                    alert(error.message);
+                    alert(result.errors);
                 } else {
                     alert('admin is logged in successfully');
 
@@ -57,6 +63,12 @@ export const asyncLoginAdmin = () => {
 
                     // Dispatch action to collect admin token
                     dispatch(getAdminDetails(result.token));
+
+                    // We should reset the form after admin is logged in
+                    resetForm();
+
+                    // redirect admin to home page
+                    reDirect();
                 }
             })
 

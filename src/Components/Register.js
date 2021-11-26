@@ -1,19 +1,21 @@
 import React from 'react';
 
+import{useDispatch} from 'react-redux';
+
 import {useFormik} from 'formik';
 
 import * as yup from 'yup';
+
+import {asyncRegisterAdmin} from '../actions/roleAction';
 
 // Step - 1 
 const initialValues = {
     username:'',
     email:'',
-    password:''
-}
-
-// Step-2 
-const onSubmit=(values)=>{
-    console.log(values);
+    password:'',
+    academy:{
+        name:''
+    }
 }
 
 // Step-3 
@@ -21,19 +23,33 @@ const onSubmit=(values)=>{
 const validationSchema = yup.object({
     username:yup.string().required('Required'),
     email:yup.string().email('invalid email format').required('Required'),
-    password:yup.string().min(8).max(128).required('Required')
+    password:yup.string().min(8).max(128).required('Required'),
+    academy: yup.object({
+        name: yup.string().required('academy name is required')
+    })
 })
 
 // function component
 const Register = () => {
+    // Invoke dispatch hook
+    const dispatch = useDispatch();
+
     const formik = useFormik({
         // ES6 Concise Property
         initialValues,
 
-        // Method
-        onSubmit,
+        // Method Step-2
+        onSubmit : (values,{resetForm}) => {
+            // Redirect admin to login page
+            const reDirect = () => {
+                props.history.push('/admin/login');
+            }
 
-        // Validation
+            // dispatch an action
+            dispatch(asyncRegisterAdmin(values,resetForm,reDirect));
+        },
+
+        // Validation - ES6 Concise Property
         validationSchema
     })
 
@@ -102,6 +118,26 @@ const Register = () => {
                     {/* Conditional Rendering - Simple...if */}
                     {
                         (formik.errors.password && formik.touched.password) && <span className='text-danger'> {formik.errors.password}  </span>
+                    }
+
+                </div>
+
+                {/* 4 */}
+                <div className="form-group">
+
+                    <input 
+                        type="text" 
+                        name="academy.name"
+                        placeholder='Enter Academy Name'
+                        className='form-control-lg'
+                        value={formik.values.academy.name}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                    />
+
+                    {/* Conditional Rendering - Simple...if */}
+                    {
+                        (Object.keys(formik.errors).includes('academy') && Object.keys(formik.touched).includes('academy')) && <span className='text-danger'> {formik.errors.academy.name}  </span>
                     }
 
                 </div>
