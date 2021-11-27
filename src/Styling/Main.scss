@@ -1,55 +1,60 @@
-body{
+body {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color:linen;
+    background-color: linen;
     overflow-x: hidden;
 }
 
-li{
-    list-style-type:none;
+li {
+    list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
 
-    &:hover{
+    &:hover {
         text-decoration: none;
         color: darkcyan;
     }
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
-.header-three{
+.header-three {
     margin-top: 2rem;
 }
 
-form{
+form {
     margin-top: 0.3rem;
 
     .form-group {
         margin-left: 3rem;
     }
 
-    .button-group{
+    .button-group {
         margin-left: 1rem;
     }
 }
 
-.padding{
+.padding {
     margin-top: 4rem;
 }
 
-.banner{
+.banner {
     background: url(../assets/Banner.jpg);
     background-position: center;
     background-repeat: no-repeat;
+
+    // background-size:contain - Resize the background image to make sure the image is fully visible
     background-size: contain;
+
     min-height: 60vh;
     min-width: 50%;
+
+    // background-attachment:scroll - The background image will scroll with the page. This is default
     background-attachment: scroll;
 }
