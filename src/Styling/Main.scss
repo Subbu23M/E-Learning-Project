@@ -4,6 +4,7 @@ body{
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color:linen;
+    overflow-x: hidden;
 }
 
 li{
@@ -37,4 +38,18 @@ form{
     .button-group{
         margin-left: 1rem;
     }
+}
+
+.padding{
+    margin-top: 4rem;
+}
+
+.banner{
+    background: url(../assets/Banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 60vh;
+    min-width: 50%;
+    background-attachment: scroll;
 }
