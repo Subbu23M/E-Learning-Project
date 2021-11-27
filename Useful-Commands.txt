@@ -1,5 +1,7 @@
 1)To work with git,use this commands.
 
+git init
+
 To add commits 
 git add . 
 git commit -m 'message'
