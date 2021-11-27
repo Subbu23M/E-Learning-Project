@@ -56,13 +56,13 @@ const Login = (props) => {
             <form autoComplete='off'>
 
                 {/* 1 */}
-                <div className="form-group">
+                <div className="form-group mb-3 px-5">
 
                     <input 
                         type="text" 
                         name="email"
                         placeholder='email'
-                        className='form-control-lg'
+                        className='form-control'
                         value={formik.values.email}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -76,13 +76,13 @@ const Login = (props) => {
                 </div>
 
                 {/* 2 */}
-                <div className="form-group">
+                <div className="form-group mb-3 px-5">
 
                     <input 
-                        type="text" 
+                        type="password" 
                         name="password"
                         placeholder='password'
-                        className='form-control-lg'
+                        className='form-control'
                         value={formik.values.password}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -99,15 +99,15 @@ const Login = (props) => {
 
                     <button
                         type='submit'
-                        className='btn btn-success btn-md text-capitalize text-light mr-2' 
+                        className='btn btn-success btn-md text-capitalize text-light mx-2' 
+                        onClick={formik.handleSubmit}
                     >
                         login 
                     </button>
 
                     <button
-                        type='submit'
+                        type='cancel'
                         className='btn btn-secondary btn-md text-capitalize text-light' 
-                        onClick={formik.handleSubmit}
                     >
                         cancel 
                     </button>

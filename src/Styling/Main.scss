@@ -3,6 +3,7 @@ body{
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:linen;
 }
 
 li{
@@ -27,10 +28,10 @@ input:focus{
 }
 
 form{
-    margin-top: 0.4rem;
+    margin-top: 0.3rem;
 
     .form-group {
-        margin-left: 36rem;
+        margin-left: 3rem;
     }
 
     .button-group{

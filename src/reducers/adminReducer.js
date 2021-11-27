@@ -10,14 +10,21 @@ const adminReducer = (state = initialState, action) => {
             return {
                 ...state,
                 data: {
-                    ...action.payload
-                }
-            }
+                    ...action.payload,
+                },
+            };
+        }
+
+        case 'STOP_LOADING': {
+            return {
+                ...state,
+                isLoading: !state.isLoading,
+            };
         }
         default: {
             return {
-                ...state
-            }
+                ...state,
+            };
         }
     }
 }

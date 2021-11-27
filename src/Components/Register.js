@@ -63,13 +63,13 @@ const Register = (props) => {
             <form autoComplete='off'>
 
                 {/* 1 */}
-                <div className="form-group mb-2">
+                <div className="form-group mb-3 px-5">
 
                     <input 
                         type="text" 
                         name="username"
                         placeholder='Enter username'
-                        className='form-control-lg'
+                        className='form-control'
                         value={formik.values.username}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -83,13 +83,13 @@ const Register = (props) => {
                 </div>
 
                 {/* 2 */}
-                <div className="form-group">
+                <div className="form-group mb-3 px-5">
 
                     <input 
                         type="text" 
                         name="email"
                         placeholder='Enter email'
-                        className='form-control-lg'
+                        className='form-control'
                         value={formik.values.email}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -103,13 +103,13 @@ const Register = (props) => {
                 </div>
 
                 {/* 3 */}
-                <div className="form-group">
+                <div className="form-group mb-3 px-5">
 
                     <input 
-                        type="text" 
+                        type="password" 
                         name="password"
                         placeholder='Enter password'
-                        className='form-control-lg'
+                        className='form-control'
                         value={formik.values.password}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -123,13 +123,13 @@ const Register = (props) => {
                 </div>
 
                 {/* 4 */}
-                <div className="form-group">
+                <div className="form-group mb-3 px-5">
 
                     <input 
                         type="text" 
                         name="academy.name"
                         placeholder='Enter Academy Name'
-                        className='form-control-lg'
+                        className='form-control'
                         value={formik.values.academy.name}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -142,19 +142,19 @@ const Register = (props) => {
 
                 </div>
 
-                <div className="button-group d-flex justify-content-center align-items-center">
+                <div className="button-group d-flex justify-content-center mb-2 align-items-center">
 
                     <button
                         type='submit'
-                        className='btn btn-success btn-md text-capitalize text-light mr-2' 
+                        className='btn btn-success btn-md text-capitalize text-light mx-2' 
+                        onClick={formik.handleSubmit}
                     >
                         register 
                     </button>
 
                     <button
-                        type='submit'
-                        className='btn btn-secondary btn-md text-capitalize text-light' 
-                        onClick={formik.handleSubmit}
+                        type='cancel'
+                        className='btn btn-secondary btn-md text-capitalize text-light mx-2' 
                     >
                         cancel 
                     </button>

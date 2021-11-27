@@ -99,6 +99,10 @@ const NavBar = (props) => {
                                 </>
                             ) : (
                                 <>
+                                    <h4 className='text-info mx-2 my-3'>
+                                        For Admin
+                                    </h4>
+
                                     <li className='list-group-item'>
                                         <Link 
                                             to='/admin/register'

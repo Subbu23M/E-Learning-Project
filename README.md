@@ -3,7 +3,7 @@
 
 ### 🛠 Tech Stack
 
-- 💻 HTML5 | CSS3 | Sass | JavaScript | ES5 | ES6
+- 💻 HTML5 | CSS3 | Sass | Bootstrap5 | JavaScript | ES5 | ES6
 - 🌐 ReactJS | Redux
 -  [Bootstrap](https://getbootstrap.com/) [react-router-dom](https://www.npmjs.com/package/react-router-dom), [axios](https://www.npmjs.com/package/axios) [redux](https://redux.js.org/) [react-redux](https://react-redux.js.org/)
 
