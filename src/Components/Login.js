@@ -1,24 +1,20 @@
 import React from 'react';
-
 import { useDispatch } from 'react-redux';
-
 import {useFormik} from 'formik';
-
 import * as yup from 'yup';
-
 import {asyncLoginAdmin} from '../actions/roleAction';
 
 // Step - 1 
 const initialValues = {
-    email:'',
-    password:''
+    email: '',
+    password: ''
 }
 
 // Step-3 
 // Validating form
 const validationSchema = yup.object({
-    email:yup.string().email('invalid email format').required('Required'),
-    password:yup.string().min(8).max(128).required('Required')
+    email: yup.string().email('invalid email format').required('Required'),
+    password: yup.string().min(8).max(128).required('Required')
 })
 
 // function component
@@ -26,20 +22,22 @@ const Login = (props) => {
 
     // Invoke useDispatch hook
     const dispatch = useDispatch();
-    
+
     const formik = useFormik({
         // ES6 Concise Property
         initialValues,
 
         // Method Step-2
-        onSubmit : (values,{resetForm}) => {
+        onSubmit: (values, {
+            resetForm
+        }) => {
             // Redirect admin to Home page
             const reDirect = () => {
                 props.history.push('/home');
             }
 
             // dispatch an action
-            dispatch(asyncLoginAdmin(values,resetForm,reDirect));
+            dispatch(asyncLoginAdmin(values, resetForm, reDirect));
         },
 
         // Validation - ES6 Concise Property

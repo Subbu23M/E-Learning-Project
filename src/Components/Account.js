@@ -1,19 +1,13 @@
 import React from 'react';
-
 import { useSelector } from 'react-redux';
-
 import Loader from '../Loader';
 
 const Account = () => {
-     // To read state within the component
+    // To read state within the component
     const store = useSelector((state) => {
         return state.adminRole;
-    }) 
-    // console.log('hello');
-    // console.log(store);
-    // console.log(store.isLoading);
-    // console.log(store.data);
-
+    })
+    
     return (
         <>
 
@@ -25,7 +19,6 @@ const Account = () => {
             {
                 (store.isLoading) ? <Loader/> :
                         <article>
-
                             <p className='text-dark mx-2 lead'>
                                 Admin-Username :<span className='text-success'> {store.data.username} </span>  <br /> 
                                 Admin-Email :<span className='text-success'> {store.data.email} </span>   <br />

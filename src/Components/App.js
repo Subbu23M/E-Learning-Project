@@ -1,7 +1,5 @@
 import React from 'react';
-
 import '../Styling/Main.scss';
-
 import NavBar from './NavBar';
 
 const App = () => {

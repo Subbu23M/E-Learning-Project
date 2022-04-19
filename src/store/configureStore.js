@@ -3,11 +3,8 @@ import {
     combineReducers,
     applyMiddleware
 } from 'redux';
-
 import thunk from 'redux-thunk';
-
 import adminReducer from '../reducers/adminReducer';
-
 import studentReducer from '../reducers/studentReducer';
 
 // creating store

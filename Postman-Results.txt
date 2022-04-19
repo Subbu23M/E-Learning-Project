@@ -1,0 +1,26 @@
+1)
+{
+    "username": "subramanyam",
+    "email": "subbuelearn@gmail.com",
+    "password": "qwerty25As",
+    "academy": {
+        "name": "go-learn"
+    }
+}
+
+{
+    "notice": "Successfully created admin for go-learn"
+}
+
+
+2)
+{
+    "email": "subbuelearn@gmail.com",
+    "password": "qwerty25As"
+}
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWEyMGNiNDliNTUxNTIzZjQzMjAzYWMiLCJlbWFpbCI6InN1YmJ1ZWxlYXJuQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoic3VicmFtYW55YW0iLCJyb2xlIjoiYWRtaW4iLCJhY2FkZW15SWQiOiJkZGExMGIwYy0xZDhiLTRjOTktYWFmYS01OTAwZjIyMzU3OWMiLCJpYXQiOjE2MzgwMTAzOTAsImV4cCI6MTYzODE4MzE5MH0.LlT4I7_ZOzCUEEj4-_D8xF5lcfMxGeTZ8iWC_RqF95Y"
+}
+
+3){"_id":"61a20cb49b551523f43203ac","username":"subramanyam","role":"admin","email":"subbuelearn@gmail.com","academy":{"academyId":"dda10b0c-1d8b-4c99-aafa-5900f223579c","name":"go-learn"}}

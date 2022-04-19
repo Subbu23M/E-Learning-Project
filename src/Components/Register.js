@@ -1,29 +1,25 @@
 import React from 'react';
-
 import{useDispatch} from 'react-redux';
-
 import {useFormik} from 'formik';
-
 import * as yup from 'yup';
-
 import {asyncRegisterAdmin} from '../actions/roleAction';
 
 // Step - 1 
 const initialValues = {
-    username:'',
-    email:'',
-    password:'',
-    academy:{
-        name:''
+    username: '',
+    email: '',
+    password: '',
+    academy: {
+        name: ''
     }
 }
 
 // Step-3 
 // Validating form
 const validationSchema = yup.object({
-    username:yup.string().required('Required'),
-    email:yup.string().email('invalid email format').required('Required'),
-    password:yup.string().min(8).max(128).required('Required'),
+    username: yup.string().required('Required'),
+    email: yup.string().email('invalid email format').required('Required'),
+    password: yup.string().min(8).max(128).required('Required'),
     academy: yup.object({
         name: yup.string().required('academy name is required')
     })
@@ -39,14 +35,16 @@ const Register = (props) => {
         initialValues,
 
         // Method Step-2
-        onSubmit : (values,{resetForm}) => {
+        onSubmit: (values, {
+            resetForm
+        }) => {
             // Redirect admin to login page
             const reDirect = () => {
                 props.history.push('/admin/login');
             }
 
             // dispatch an action
-            dispatch(asyncRegisterAdmin(values,resetForm,reDirect));
+            dispatch(asyncRegisterAdmin(values, resetForm, reDirect));
         },
 
         // Validation - ES6 Concise Property

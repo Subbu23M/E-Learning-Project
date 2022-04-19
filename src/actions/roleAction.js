@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 // creating admin registration action
-export const asyncRegisterAdmin = (values,resetForm,reDirect) => {
+export const asyncRegisterAdmin = (values, resetForm, reDirect) => {
     return () => {
         const baseUrl = 'https://dct-e-learning.herokuapp.com/api/admin/register';
 
         // consuming code
         axios
-            .post(baseUrl,values)
+            .post(baseUrl, values)
 
             // success
             .then((response) => {
@@ -37,14 +37,14 @@ export const asyncRegisterAdmin = (values,resetForm,reDirect) => {
 }
 
 // creating admin login action
-export const asyncLoginAdmin = (values,resetForm,reDirect) => {
+export const asyncLoginAdmin = (values, resetForm, reDirect) => {
     return ((dispatch) => {
 
         const baseUrl = 'https://dct-e-learning.herokuapp.com/api/admin/login';
 
         // consuming code
         axios
-            .post(baseUrl,values)
+            .post(baseUrl, values)
 
             // success
             .then((response) => {

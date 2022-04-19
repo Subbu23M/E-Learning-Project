@@ -1,21 +1,12 @@
 import React,{useEffect} from 'react';
-
 import {Link,Route,Switch,withRouter} from 'react-router-dom';
-
 import { useSelector,useDispatch } from 'react-redux';
-
 import Home from './Home';
-
 import Register from './Register';
-
 import Login from './Login';
-
 import Dashboard from './Dashboard';
-
 import Account from './Account';
-
 import PageError from './PageError';
-
 import {getAdminDetails,setAdminInfo} from '../actions/roleAction';
 
 const NavBar = (props) => {
@@ -27,14 +18,14 @@ const NavBar = (props) => {
         // GET JWT_TOKEN
         const token = localStorage.getItem('JWT_TOKEN');
 
-        if(token){
+        if (token) {
             // Dispatch an action
             dispatch(getAdminDetails(token))
         }
     }
 
     // Invoke useEffect Hook
-    useEffect(fetchData,[]);
+    useEffect(fetchData, []);
 
     // Read state within the component
     const store = useSelector((state) => {
